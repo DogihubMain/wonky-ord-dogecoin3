@@ -22,6 +22,7 @@ services:
       # If your dogecoin node is running in a container, you can mount the dogecoin data directory to the indexer container
       # - dog-data:/root/.dogecoin
       - /app/dogecoin-node/volume:/root/.dogecoin:ro
+      - ./wonky_ord_data:/root/.data
     logging:
       driver: "json-file"
       options:
